@@ -1,0 +1,21 @@
+{
+    "clocks":[
+        {
+            "location": "London",
+            "zoneName": "Europe/London"
+        },
+        {
+            "location": "Stockholm",
+            "zoneName": "Europe/Stockholm"
+        },
+        {
+            "location": "Beijing",
+            "zoneName": "Asia/Shanghai"
+        },
+        {
+            "location": "Auckland",
+            "zoneName": "Pacific/Auckland"
+        }
+
+    ]
+}
