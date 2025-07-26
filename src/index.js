@@ -1,13 +1,12 @@
 import _ from 'lodash';
 import { DateTime } from "luxon";
-import Handlebars from "handlebars";
+// import Handlebars from "handlebars";
 
 import defaultConfig from './default_config.json'
 import './style.css';
 
-
-var worldClockTemplate = require("./index.handlebars");
 var indexTemplate = require("./index.handlebars");
+
 
 
 function component() {
@@ -42,7 +41,7 @@ function update_clock(clock, current_time) {
 
 let next_update = null;
 
-function update_clocks(update_time) {
+function update_clocks() {
     let current_time = new Date()
     window.requestAnimationFrame(update_clocks)
     if (next_update !== null && current_time < next_update) {
@@ -60,4 +59,5 @@ function update_clocks(update_time) {
     }
 }
 
+// setup animations
 window.requestAnimationFrame(update_clocks)
