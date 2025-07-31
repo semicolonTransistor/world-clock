@@ -4,18 +4,23 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "build": "webpack",
+    "build-dev": "webpack --mode development"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@statoscope/webpack-plugin": "^5.29.0",
+    "copy-webpack-plugin": "^13.0.0",
     "handlebars-loader": "^1.7.3",
     "html-webpack-plugin": "^5.6.3",
+    "json-minimizer-webpack-plugin": "^5.0.1",
     "webpack": "^5.99.7",
     "webpack-cli": "^6.0.1"
   },
   "dependencies": {
+    "@vvo/tzdb": "^6.178.0",
     "css-loader": "^7.1.2",
     "handlebars": "^4.7.8",
     "lodash": "^4.17.21",

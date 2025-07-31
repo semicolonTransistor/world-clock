@@ -1,15 +1,88 @@
-:root {
-    --font-size-ref: min(30vh, 30vw);
+
+:root[data-theme="dark"]{
+    color-scheme: dark;
     --main-text-color: white;
     --secondary-text-color: grey;
+    --background-color: black;
+    --secondary-background-color: #696969;
+    --highlight-color: #ddd;
+    --highlight-text-color: black;
+    margin: 0;
 }
 
-body{
+:root[data-theme="light"]{
+    --main-text-color: black;
+    --secondary-text-color: #;
+    --secondary-background-color: #696969;
     margin: 0;
-    background-color: black;
-    color:white;
 }
-.main{
+
+:root{
+    --font-size-ref: min(30vh, 30vw);
+    background-color: var( --background-color);
+    color: var(--main-text-color);
+}
+
+body {
+    margin: inherit;
+    font-size: calc(var(--font-size-ref) * 0.07);
+}
+
+input {
+    font-size: inherit;
+}
+
+button {
+    font-size: inherit;
+}
+
+#navbar.hiding{
+    background-color: var(--secondary-text-color);
+    /* Black background color */
+    position: fixed;
+    /* Make it stick/fixed */
+    top: 0px;
+    /* Stay on top */
+    width: 100%;
+    /* Full width */
+    transition: top 0.3s;
+}
+
+#navbar{
+    font-size: calc(var(--font-size-ref) * 0.1);
+    background-color: var(--secondary-text-color);
+    top: 0px;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+}
+
+#navbar-trigger {
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: calc(var(--font-size-ref) * 0.1);
+}
+
+
+/* Style the navbar links */
+#navbar a {
+    float: right;
+    font-weight: bold;
+    display: block;
+    color: var(--main-text-color);
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+}
+
+#navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.main {
     min-width: 100%;
     height: 100%;
     min-height: 100vh;
@@ -44,13 +117,13 @@ body{
     color: var(--main-text-color)
 }
 
-.centering_container{
+.centering-container {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.local_clock{
+.local_clock {
     --primary-font-size: var(--font-size-ref);
 }
 
@@ -59,18 +132,18 @@ body{
     /* min-width: calc(var(--primary-font-size) * 7); */
 }
 
-.clock-location{
+.clock-location {
     font-size: calc(var(--primary-font-size));
     color: var(--main-text-color);
     font-weight: bold;
 }
 
-.clock-location-secondary{
+.clock-location-secondary {
     font-size: calc(var(--primary-font-size) * 0.8);
     color: var(--main-text-color);
 }
 
-.world-clock-container{
+.world-clock-container {
     --primary-font-size: calc(var(--font-size-ref) * 0.3);
     margin: calc(var(--font-size-ref) * 0.2);
     display: grid;
@@ -78,19 +151,77 @@ body{
     gap: calc(var(--font-size-ref) * 0.2);
 }
 
-.world-clock-row{
+.world-clock-row {
     width: 100%;
 }
 
-.world_clock_left{
+.world_clock_left {
     float: left;
     justify-content: left;
     text-align: left;
     max-width: 50%;
 }
-.world_clock_right{
+
+.world_clock_right {
     float: right;
     justify-content: right;
     text-align: right;
     max-width: 50%;
+}
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: field;
+  min-width: 230px;
+  border: 1px solid light-dark;
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content span {
+  color: fieldtext;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content span:hover {
+    background-color: var(--highlight-color);
+    color: var(--highlight-text-color)
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.dropdown-content:hover, .show {
+   display:block;
 }
