@@ -1,20 +1,20 @@
 {
     "clocks":[
         {
-            "location": "London",
-            "zoneName": "Europe/London"
+            "city": "London",
+            "timeZone": "Europe/London"
         },
         {
-            "location": "Stockholm",
-            "zoneName": "Europe/Stockholm"
+            "city": "Stockholm",
+            "timeZone": "Europe/Stockholm"
         },
         {
-            "location": "Beijing",
-            "zoneName": "Asia/Shanghai"
+            "city": "Beijing",
+            "timeZone": "Asia/Shanghai"
         },
         {
-            "location": "Auckland",
-            "zoneName": "Pacific/Auckland"
+            "city": "Auckland",
+            "timeZone": "Pacific/Auckland"
         }
 
     ]

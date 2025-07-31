@@ -9,10 +9,18 @@ module.exports = {
     mode: "production",
     entry: {
         index: './src/index.js',
+        settings: './src/settings.js'
     },
     plugins: [
         new HtmlWebpackPlugin({
-          title: 'Output Management',
+          title: 'World Clock',
+          chunks: ['index'],
+          filename: 'index.html'
+        }),
+        new HtmlWebpackPlugin({
+          title: 'World Clock',
+          chunks: ['settings'],
+          filename: 'settings.html'
         }),
         new CopyPlugin({
             patterns: [
@@ -46,5 +54,8 @@ module.exports = {
             }),
             new JsonMinimizerPlugin(),
         ],
+        splitChunks: {
+            chunks: 'all',
+        },
     },
 }

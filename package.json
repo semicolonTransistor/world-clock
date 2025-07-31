@@ -20,6 +20,7 @@
     "webpack-cli": "^6.0.1"
   },
   "dependencies": {
+    "@vvo/tzdb": "^6.178.0",
     "css-loader": "^7.1.2",
     "handlebars": "^4.7.8",
     "lodash": "^4.17.21",

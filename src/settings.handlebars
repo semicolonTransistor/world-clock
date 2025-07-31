@@ -1,0 +1,44 @@
+{{> navbar}}
+<div class="centering-container">
+    <div>
+        <hr>
+        <span class="settings-section-title">Clocks</span>
+        <hr>
+        <table>
+            <thead>
+                <tr>
+                    <td>City</td>
+                    <td>Time Zone</td>
+                    <td>Time</td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody id="clock-table">
+                {{#each clocks}}
+                <tr class="clock-entry">
+                    {{> clock_entry}}
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        <button id="add-clock-entry-btn">Add Clock</button>
+        <hr>
+        <span class="settings-section-title">Export and Import</span>
+        <hr>
+        <div>
+            <span>Export: </span>
+            <button id="download-settings-btn">Download Settings</button>
+        </div>
+
+        <div>
+            <span>Import: </span>
+            <input id="settings-upload-file" type="file" accept="application/json">
+            <button id="settings-import-btn"> Upload</button>
+        </div>
+        <hr>
+        <span class="settings-section-title">Reset</span>
+        <hr>
+        <button id="settings-reset-btn">Reset Settings</button>
+        
+    </div>
+</div>
