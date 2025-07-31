@@ -15,10 +15,11 @@ module.exports = {
         new HtmlWebpackPlugin({
           title: 'World Clock',
           chunks: ['index'],
-          filename: 'index.html'
+          filename: 'index.html',
+          template: './src/index.html'
         }),
         new HtmlWebpackPlugin({
-          title: 'World Clock',
+          title: 'Settings',
           chunks: ['settings'],
           filename: 'settings.html'
         }),
