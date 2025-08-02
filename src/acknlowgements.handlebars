@@ -1,0 +1,15 @@
+{{> navbar}}
+<div class="centering-container">
+    <div>
+        {{#each this}}
+        <div>
+            <h3>{{name}}</h3> <span>{{version}}</span>
+            <hr>
+            <p class="license-text">
+                {{licenseText}}
+            </p>
+
+        </div>
+        {{/each}}
+    </div>
+</div>
