@@ -1,5 +1,4 @@
 import defaultConfig from './default_config.json'
-import { merge } from 'lodash'
 
 
 export function getConfig() {
@@ -11,14 +10,14 @@ export function getConfig() {
         console.log("Reading from local storage")
         console.log(local_storage_config)
         try {
-            config = config, JSON.parse(local_storage_config)
+            config = JSON.parse(local_storage_config)
         } catch (SyntaxError) {
             console.log("Config read from local storage is mal-formed!")
             console.log(local_storage_config)
 
             window.localStorage.removeItem("config")
         }
-        config = merge(defaultConfig, config)
+        config = {...defaultConfig, ...config}
     }
 
     setConfig(config)

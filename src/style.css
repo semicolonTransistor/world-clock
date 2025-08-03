@@ -1,3 +1,4 @@
+@import 'material-icons/iconfont/outlined.css';
 
 :root[data-theme="dark"]{
     color-scheme: dark;
@@ -7,13 +8,18 @@
     --secondary-background-color: #696969;
     --highlight-color: #ddd;
     --highlight-text-color: black;
+    --delete-background-color: #950606;
+    --button-background-color: #00008B;
     margin: 0;
 }
 
 :root[data-theme="light"]{
     --main-text-color: black;
-    --secondary-text-color: #;
+    --secondary-text-color: grey;
     --secondary-background-color: #696969;
+    --background-color: white;
+    --highlight-color: #222;
+    --highlight-text-color: white;
     margin: 0;
 }
 
@@ -49,7 +55,7 @@ button {
 }
 
 #navbar{
-    font-size: calc(var(--font-size-ref) * 0.1);
+    font-size: max(calc(var(--font-size-ref) * 0.1), 18pt);
     background-color: var(--secondary-text-color);
     top: 0px;
     display: block;
@@ -228,4 +234,25 @@ button {
 
 .license-text {
     white-space: pre-line
+}
+
+/* button {
+    background-color: var(--button-background-color);
+    border-color: var(--button-background-color);
+}
+
+button:hover {
+    background-color: color-mix(in srgb, var(--button-background-color), var(--main-text-color) 20%);
+    border-color: color-mix(in srgb, var(--button-background-color), var(--main-text-color) 20%);
+} */
+
+
+.clock-entry-delete-btn {
+    background-color: var(--delete-background-color);
+    border-color: var(--delete-background-color);
+}
+
+.clock-entry-delete-btn:hover {
+    background-color: color-mix(in srgb, var(--delete-background-color), var(--main-text-color) 20%);
+    border-color: color-mix(in srgb, var(--delete-background-color), var(--main-text-color) 20%);
 }

@@ -30,6 +30,7 @@
     "handlebars": "^4.7.8",
     "lodash": "^4.17.21",
     "luxon": "^3.6.1",
+    "material-icons": "^1.13.14",
     "save-dev": "^0.0.1-security",
     "style-loader": "^4.0.0",
     "url-regex-safe": "^4.0.0"
