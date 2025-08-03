@@ -1,6 +1,7 @@
 import './style.css';
 import { getConfig, setConfig, deleteConfig } from './utils';
-import { getClockTickerCallback, cities, timeZoneList } from './clocks';
+import { getClockTickerCallback} from './clocks';
+import { cities, timeZoneList } from './timezone_utils'
 
 // templates
 

@@ -1,0 +1,19 @@
+{{> navbar}}
+
+<div class="centering-container">
+    <div>
+        <h2>Dependencies</h2>
+        <p>This site is built with the following open source software.</p>
+        <hr>
+        {{#each this}}
+        <div>
+            <h3><a href="{{repository}}">{{name}}</a></h3> <span>{{version}}</span>
+            <hr>
+            <p class="license-text">
+                {{licenseText}}
+            </p>
+
+        </div>
+        {{/each}}
+    </div>
+</div>

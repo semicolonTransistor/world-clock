@@ -7,17 +7,22 @@
     "build": "webpack",
     "build-dev": "webpack --mode development"
   },
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "author": "Jinyu Liu <liu.jy@msn.com>",
+  "license": "MIT",
+  "description": "A minimalist world clock app for keeping track of time for friends around the world.",
   "devDependencies": {
+    "@babel/core": "^7.28.0",
+    "@babel/preset-env": "^7.28.0",
     "@statoscope/webpack-plugin": "^5.29.0",
+    "babel-loader": "^10.0.0",
+    "babel-plugin-transform-imports": "^2.0.0",
     "copy-webpack-plugin": "^13.0.0",
     "handlebars-loader": "^1.7.3",
     "html-webpack-plugin": "^5.6.3",
     "json-minimizer-webpack-plugin": "^5.0.1",
-    "webpack": "^5.99.7",
-    "webpack-cli": "^6.0.1"
+    "webpack": "^5.101.0",
+    "webpack-cli": "^6.0.1",
+    "webpack-license-plugin": "^4.5.1"
   },
   "dependencies": {
     "@vvo/tzdb": "^6.178.0",
@@ -25,7 +30,9 @@
     "handlebars": "^4.7.8",
     "lodash": "^4.17.21",
     "luxon": "^3.6.1",
+    "material-icons": "^1.13.14",
     "save-dev": "^0.0.1-security",
-    "style-loader": "^4.0.0"
+    "style-loader": "^4.0.0",
+    "url-regex-safe": "^4.0.0"
   }
 }

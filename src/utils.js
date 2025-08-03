@@ -3,11 +3,12 @@ import defaultConfig from './default_config.json'
 
 export function getConfig() {
     // Get config
-    let config = null
+    let config = defaultConfig
     // check local storage
     let local_storage_config = window.localStorage.getItem("config")
     if (local_storage_config != null) {
         console.log("Reading from local storage")
+        console.log(local_storage_config)
         try {
             config = JSON.parse(local_storage_config)
         } catch (SyntaxError) {
@@ -16,9 +17,7 @@ export function getConfig() {
 
             window.localStorage.removeItem("config")
         }
-    } else {
-        console.log("Loading default config")
-        config = defaultConfig
+        config = {...defaultConfig, ...config}
     }
 
     setConfig(config)
