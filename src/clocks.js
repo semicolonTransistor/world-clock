@@ -14,7 +14,24 @@ function update_clock(clock, current_time) {
     for (let field of fields) {
         let fieldFormat = field.dataset.format
         if (fieldFormat !== null) {
-            field.innerText = time.toFormat(fieldFormat)
+            if (fieldFormat === "__difference") {
+                let offset_difference = time.offset - current_time.offset
+                if (offset_difference === 0) {
+                    field.innerText = ""
+                    continue
+                }
+
+                let behind = offset_difference < 0
+                let abs_offset_difference = Math.abs(offset_difference)
+
+                if (abs_offset_difference % 60 == 0) {
+                    field.innerText = `${abs_offset_difference / 60} hours ${behind ? "behind" : "ahead"}`
+                } else {
+                    field.innerText = `${Math.floor(abs_offset_difference / 60)} hours and ${abs_offset_difference % 60} minutes ${behind ? "behind" : "ahead"}`
+                }
+            } else {
+                field.innerText = time.toFormat(fieldFormat)
+            }
         }
 
     }
